@@ -5,11 +5,16 @@ using UnityEngine;
 public class ExchangeItems : MonoBehaviour
 {
     public GameObject dialogue;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    //items can add more when know what ingredients
+    public GameObject chickpea;
+    public GameObject tahini;
+    public GameObject garlic;
+    public GameObject lemon;
+    public GameObject oil;
+    public GameObject salt;
+    public GameObject juice;
+    public GameObject cumin;
 
     // Update is called once per frame
     void Update()
@@ -17,6 +22,10 @@ public class ExchangeItems : MonoBehaviour
         if(dialogue.activeInHierarchy == true)
         {
             //code for exchanging items
+            if (chickpea.activeSelf == true && tahini.activeSelf == true && garlic.activeSelf == true && lemon.activeSelf == true && oil.activeSelf == true && salt.activeSelf == true && juice.activeSelf == true && cumin.activeSelf == true)
+            {
+                //hummus twerl new scene
+            }
         }
     }
 }
