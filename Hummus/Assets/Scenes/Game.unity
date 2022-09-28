@@ -409,7 +409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -822, y: 179}
+  m_AnchoredPosition: {x: -822, y: 388}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236610956
@@ -2934,7 +2934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &3783239441916178626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3071,7 +3071,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.00024414062, y: 0.0014953613}
   m_SizeDelta: {x: 0.0024414062, y: 0.0040283203}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3304,7 +3304,6 @@ GameObject:
   - component: {fileID: 7229985401092117733}
   - component: {fileID: 7229985401092117731}
   - component: {fileID: 7229985401092117732}
-  - component: {fileID: 7229985401092117735}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -3312,25 +3311,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7229985401092117735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7229985401092117734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e9580c3c5ed9ec43bb47e398c5b6b97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackPoint: {fileID: 655896538}
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  attackRange: 1.46
-  attackDamage: 40
-  attackRate: 2
 --- !u!114 &7229985401269578235
 MonoBehaviour:
   m_ObjectHideFlags: 3
