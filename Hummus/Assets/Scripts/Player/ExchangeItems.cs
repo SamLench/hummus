@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExchangeItems : MonoBehaviour
 {
@@ -22,9 +23,9 @@ public class ExchangeItems : MonoBehaviour
         if(dialogue.activeInHierarchy == true)
         {
             //code for exchanging items
-            if (chickpea.activeSelf == true && tahini.activeSelf == true && garlic.activeSelf == true && lemon.activeSelf == true && oil.activeSelf == true && salt.activeSelf == true && juice.activeSelf == true && cumin.activeSelf == true)
+            if (chickpea.activeSelf == true && tahini.activeSelf == true && garlic.activeSelf == true && lemon.activeSelf == true && oil.activeSelf == true && salt.activeSelf == true && juice.activeSelf == true && cumin.activeSelf == true && Input.GetKeyDown("e"))
             {
-                //hummus twerl new scene
+                SceneManager.LoadScene("Victory");
             }
         }
     }
