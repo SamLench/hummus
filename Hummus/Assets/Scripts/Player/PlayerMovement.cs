@@ -38,11 +38,11 @@ public class PlayerMovement : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             //assigning speed if player is sprinting
-            //if (Input.GetKeyDown(KeyCode.LeftShift))
-            //{
-            //    speed *= 2;
-            //    isSprinting = true;
-            //}
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                speed *= 2;
+                isSprinting = true;
+            }
 
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
@@ -51,11 +51,11 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(direction * speed * Time.deltaTime);
         }
         //returning the sprint speed back to normal if the character is not currently sprinting but has been
-        //if (isSprinting && Input.GetKey(KeyCode.LeftShift) == false)
-        //{
-        //    speed /= 2;
-        //    isSprinting = false;
-        //}
+        if (isSprinting && Input.GetKey(KeyCode.LeftShift) == false)
+        {
+            speed /= 2;
+            isSprinting = false;
+        }
 
         //jumping
         if (Input.GetButtonDown("Jump") && isGrounded)

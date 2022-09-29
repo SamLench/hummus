@@ -5,22 +5,11 @@ using TMPro;
 
 public class ItemCollection : MonoBehaviour
 {
-    public GameObject cube;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public GameObject ingredient;
 
     private void OnTriggerEnter(Collider other)
     {
-        cube.SetActive(true);
+        ingredient.SetActive(true);
         Destroy(this.gameObject);
     }
 }

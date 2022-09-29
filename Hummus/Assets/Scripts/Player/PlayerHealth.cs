@@ -6,7 +6,6 @@ public class PlayerHealth : MonoBehaviour
 {
     public GameObject player;
     public GameObject playerPrefab;
-    public GameObject spawnPoint;
 
     public int maxHealth = 100;
     public int currentHealth;
@@ -16,7 +15,6 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnPoint = GameObject.Find("SpawnPoint");
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -26,10 +24,10 @@ public class PlayerHealth : MonoBehaviour
     {
         //DETECT DAMAGE TAKEN HERE
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    TakeDamage(20);
+        //}
     }
 
     void TakeDamage(int damage)
@@ -45,5 +43,10 @@ public class PlayerHealth : MonoBehaviour
     public void KillPlayer(GameObject player)
     {
         Destroy(this.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        KillPlayer(player);
     }
 }
